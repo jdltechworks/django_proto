@@ -1,0 +1,14 @@
+client/node_modules
+client/hot
+.DS_Store
+
+*.pyc
+*.pyo
+.env
+.idea
+proto_dependencies
+home/__pycache__/
+home/migrations/__pycache__/
+proto_classified/__pycache__/
+proto_classified/settings/__pycache__/
+search/__pycache__/
