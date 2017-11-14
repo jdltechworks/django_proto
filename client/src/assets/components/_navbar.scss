@@ -1,22 +1,18 @@
 // Navbar
 .navbar {
-    content: "";
-    display: table;
-    clear: both;
-    padding: 10px 0;
-    &-section {
-        display: inline-table;
-        vertical-align: middle;
-    }
+    @include layout(12 0 fluid float inside);
+    @include clearfix;
+    @include squish(2);
     &-brand {
-        display: block;
-        margin-right: 4em;
+        @include span(2);
+        &-link {
+            display: block;
+        }
     }
-    &-main {
-        border-bottom: 5px solid $primary-color;
+    &-section {
+        @include span(6);
+        &-last {
+            @include span(4);
+        }
     }
-}
-
-.container {
-
 }

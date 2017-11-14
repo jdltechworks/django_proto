@@ -4,4 +4,9 @@
 @import "~sass-mediaqueries/media-queries";
 @import "helpers/clearfix";
 
+@import "constants/vars";
+
+@import "layout/header";
+
 @import "components/grids";
+@import "components/navbar";
