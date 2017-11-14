@@ -7,6 +7,18 @@ const DOMAIN = process.env.DOMAIN || 'localhost'
 const PORT = process.env.PORT || 8080
 const PROTOCOL = process.env.PROTOCOL || 'http'
 
+const rules =[
+    {
+        test: /\.scss$/,
+        exclude: /node_modules/,
+        use: [
+            {loader: 'style-loader'},
+            {loader: 'css-loader'},
+            {loader: 'sass-loader'}
+        ]
+    }
+]
+
 export default () => {
     const strategy = {
         entry: 'append',
@@ -22,6 +34,9 @@ export default () => {
                 //Only reload successful updates
                 'webpack/hot/only-dev-server'
             ]
+        },
+        module: {
+            rules
         },
         output: {
           publicPath: `${PROTOCOL}://${DOMAIN}:${PORT}/hot/js/`

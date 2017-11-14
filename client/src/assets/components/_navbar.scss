@@ -1,0 +1,22 @@
+// Navbar
+.navbar {
+    content: "";
+    display: table;
+    clear: both;
+    padding: 10px 0;
+    &-section {
+        display: inline-table;
+        vertical-align: middle;
+    }
+    &-brand {
+        display: block;
+        margin-right: 4em;
+    }
+    &-main {
+        border-bottom: 5px solid $primary-color;
+    }
+}
+
+.container {
+
+}

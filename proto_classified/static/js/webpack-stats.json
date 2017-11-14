@@ -1,0 +1,17 @@
+{
+    "status": "done",
+    "chunks": {
+        "app": [
+            {
+                "name": "app.js",
+                "path": "/Users/jdltechworks/Projects/proto_classified/proto_classified/static/js/app.js"
+            },
+            {
+                "name": "../css/app.css",
+                "path": "/Users/jdltechworks/Projects/proto_classified/proto_classified/static/css/app.css"
+            }
+        ]
+    },
+    "startTime": 1510639487142,
+    "endTime": 1510639490700
+}
