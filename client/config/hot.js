@@ -9,6 +9,16 @@ const PROTOCOL = process.env.PROTOCOL || 'http'
 
 const rules =[
     {
+        test: /\.(jpe|jpg|woff|woff2|eot|ttf|svg)(\?.*$|$)/,
+        use: [
+            {
+                loader: 'url-loader', options: {
+                    limit: 8192
+                }
+            }
+        ]
+    },
+    {
         test: /\.scss$/,
         exclude: /node_modules/,
         use: [
@@ -22,7 +32,8 @@ const rules =[
 export default () => {
     const strategy = {
         entry: 'append',
-        output: 'append'
+        output: 'append',
+        rules: 'append'
     }
     return merge.strategy(strategy)({
         devtool: 'source-map',

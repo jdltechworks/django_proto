@@ -1,18 +1,54 @@
 // Navbar
 .navbar {
-    @include layout(12 0 fluid float inside);
-    @include clearfix;
-    @include squish(2);
-    &-brand {
-        @include span(2);
-        &-link {
-            display: block;
+  align-items: stretch;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  .navbar-section {
+    align-items: center;
+    display: flex;
+    flex: 1 0 0;
+
+    &:last-child {
+      justify-content: flex-end;
+    }
+    &.branding {
+        flex-grow: 0;
+    }
+    &.form {
+        flex-grow: 5;
+        padding-left: 5%;
+        .input-inline {
+            width: 100%;
         }
     }
-    &-section {
-        @include span(6);
-        &-last {
-            @include span(4);
+    &.controller {
+        flex-grow: 1;
+        ul {
+            margin: 0 auto;
+            list-style: none;
+            padding: 0;
+            display: flex;
+            li {
+                margin: 0;
+                a {
+                    font-size: 1.1rem;
+                }
+            }
         }
     }
+  }
+
+  .navbar-center {
+    align-items: center;
+    display: flex;
+    flex: 0 0 auto;
+  }
+
+  .navbar-brand {
+    font-size: $font-size-lg;
+    font-weight: 500;
+    text-decoration: none;
+  }
 }

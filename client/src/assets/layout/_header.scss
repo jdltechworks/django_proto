@@ -1,7 +1,0 @@
-.header {
-  width: $container-fluid;
-  margin: auto auto 89px auto;
-	@include max-screen(724px) {
-		margin: auto auto 58px;
-	}
-}
