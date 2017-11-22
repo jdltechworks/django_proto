@@ -14,43 +14,49 @@ class NavBar extends Component {
                       <section className="navbar-section form">
                           <div className="input-group input-inline">
                             <input className="form-input" type="text" placeholder="search" />
-                            <button className="btn btn-primary btn-action input-group-btn"><i className="icon icon-search"></i></button>
+                            <button className="btn btn-primary btn-action input-group-btn">
+                                <i className="icon icon-search"></i>
+                            </button>
                           </div>
                       </section>
                       <section className="navbar-section controller">
                           <ul>
                               <li>
-                                  <a href="#" className="btn btn-link"><i class="ion-ios-cart" aria-hidden="true"></i></a>
+                                  <a href="#" className="btn btn-link">
+                                      <i className="ion-ios-cart" aria-hidden="true"></i>
+                                  </a>
                               </li>
                               <li>
-                                  <a href="#" className="btn btn-link"><figure className="avatar avatar-sm" data-initial="YZ"></figure></a>
+                                  <a href="#" className="btn btn-link">
+                                      <i className="ion-android-person" aria-hidden="true"></i>
+                                  </a>
                               </li>
                         </ul>
                       </section>
                     </div>
-                            <ul class="tab tab-block">
-                              <li class="tab-item active">
+                            <ul className="tab tab-block">
+                              <li className="tab-item active">
                                 <a href="#">Music</a>
                               </li>
-                              <li class="tab-item">
+                              <li className="tab-item">
                                 <a href="#">Playlists</a>
                               </li>
-                              <li class="tab-item">
+                              <li className="tab-item">
                                 <a href="#">Radio</a>
                               </li>
-                              <li class="tab-item">
+                              <li className="tab-item">
                                 <a href="#">Connect</a>
                               </li>
-                              <li class="tab-item">
+                              <li className="tab-item">
                                 <a href="#">Music</a>
                               </li>
-                              <li class="tab-item">
+                              <li className="tab-item">
                                 <a href="#">Playlists</a>
                               </li>
-                              <li class="tab-item">
+                              <li className="tab-item">
                                 <a href="#">Radio</a>
                               </li>
-                              <li class="tab-item">
+                              <li className="tab-item">
                                 <a href="#">Connect</a>
                               </li>
                             </ul>

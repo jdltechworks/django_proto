@@ -15,11 +15,12 @@ const screens = {
 class App extends Component {
     render() {
         const { props } = this
+        const noForm = omit(props, 'form')
         return(
             <div className="main">
                 <NavBar />
                 {Children.map(this.props.children, (child) => {
-                    return cloneElement(child, { ...props, screens })
+                    return cloneElement(child, { ...noForm, screens })
                 })}
             </div>
         )
