@@ -10,6 +10,7 @@
     "prod": "rimraf ../proto_classified/static && webpack --env=production --progress -p"
   },
   "devDependencies": {
+    "autosize": "^4.0.0",
     "babel-cli": "*",
     "babel-loader": "^7.1.2",
     "babel-plugin-transform-class-properties": "^6.24.1",
@@ -23,10 +24,13 @@
     "font-awesome": "^4.7.0",
     "ionicons": "2.0.1",
     "node-sass": "^4.5.3",
+    "react-dropzone": "^4.2.3",
     "react-hot-loader": "next",
+    "react-mde": "^1.0.6",
     "rimraf": "^2.6.2",
     "sass-loader": "^6.0.6",
     "sass-mediaqueries": "^1.6.1",
+    "showdown": "^1.8.2",
     "spectre.css": "^0.4.5",
     "style-loader": "^0.18.2",
     "url-loader": "^0.6.2",

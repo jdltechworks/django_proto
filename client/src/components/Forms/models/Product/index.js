@@ -1,14 +1,22 @@
 const Product = {
+    images: {
+        tag: 'input',
+        type: 'file',
+        custom: true,
+        name: 'images',
+        validator: 'isFile'
+    },
     title: {
         tag: 'input',
         type: 'text',
-        label: 'title',
+        name: 'title',
         validator: 'isAlpha'
     },
     description: {
         tag: 'textarea',
-        type: null,
-        label: 'description',
+        type: 'textarea',
+        custom: true,
+        name: 'description',
         validator: 'isAlpha',
     },
     categories: {
@@ -17,8 +25,14 @@ const Product = {
         options: [
             'Select a category'
         ],
-        label: 'categories',
+        name: 'categories',
         validator: 'isArray'
+    },
+    price: {
+        tag: 'input',
+        type: 'float',
+        name: 'price',
+        validator: 'isNumber'
     }
 }
 

@@ -3,15 +3,20 @@ import { validator } from './validator'
 import { renderField } from './fields'
 import React, { Component, Children, cloneElement } from 'react'
 
-class ParentForm extends Component {
+
+/**
+ * Core form class
+ * @type {Component}
+ */
+class CoreForm extends Component {
     render() {
         const { props } = this
         const { children, handleSubmit } = props
         return (
             <div className="container grid-xl">
                 <form onSubmit={handleSubmit((values) => {
-                    this.props.getFormValues(values)})
-                }>
+                    this.props.getFormValues(values)}
+                )} className="columns">
                     {Children.map(children, (child) =>
                         cloneElement(child, { ...props, renderField })
                     )}
@@ -21,7 +26,14 @@ class ParentForm extends Component {
     }
 }
 
-const createForm = (name, ChildForm, model) => {
+/**
+ * Component enhancer to add redux form props in your form component
+ * @param  {string} name      Form name
+ * @param  {FormComponent} FormComponent Form Component
+ * @param  {object} model     Form Fields configuration
+ * @return {Component}           Component
+ */
+const createForm = (name, FormComponent, model) => {
 
     const DecoratedForm = (props) => {
 
@@ -29,10 +41,11 @@ const createForm = (name, ChildForm, model) => {
             ...props,
             fields: model
         }
+
         return(
-            <ParentForm {...clonedProps}>
-                <ChildForm />
-            </ParentForm>
+            <CoreForm {...clonedProps}>
+                <FormComponent />
+            </CoreForm>
         )
 
     }

@@ -8,14 +8,30 @@ class ProductForm extends Component {
     render() {
         const { props } = this
         const { renderField, fields } = this.props
+        console.log(this.props)
         return(
-            <div className="product-form container grid-xl">
-                {map(fields, renderField.bind(this))}
-                <button className="btn btn-primary">Submit</button>
-                <button className="btn">Cancel</button>
+            <div className="column col-8 col-8-ml-auto col-mr-auto col-ml-auto">
+                <div className="panel form-product">
+                    <div className="panel-header">
+                        <div className="panel-title">
+                            <i className="ion-cube"></i> Add product
+                            <div className="text-right">
+
+                            <button className="btn mr-2">Submit</button>
+                            <button className="btn btn-primary">Cancel</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="panel-body">
+                        {map(fields, renderField.bind(this))}
+                    </div>
+                    <div className="panel-footer text-right">
+
+                    </div>
+                </div>
             </div>
         )
     }
 }
 
-export default createForm('product-shit', ProductForm, model)
+export default createForm('product-create', ProductForm, model)

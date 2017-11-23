@@ -1,10 +1,17 @@
 $ionicons-font-path: './fonts/ionicons';
+$fa-font-path: "~font-awesome/fonts";
 @import "~ionicons/scss/ionicons";
 @import "theme/variables";
 @import "theme/spectre-icons";
 @import "theme/spectre";
 @import "theme/spectre-exp";
 @import "theme/typography";
+
+
+@import "~font-awesome/scss/font-awesome";
+@import "~react-mde/lib/styles/scss/react-mde";
+@import "~react-mde/lib/styles/scss/react-mde-command-styles";
+@import "~react-mde/lib/styles/scss/markdown-default-theme";
 
 @import "constants/vars";
 @import "components/layout";
