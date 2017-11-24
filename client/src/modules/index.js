@@ -9,12 +9,16 @@ import { reducer as form } from 'redux-form'
  * import MyModule from './MyModule'
  */
 
+import * as User from './User'
+import * as Product from './Product'
 
 /**
  * You can register your module here
  * @type {Object}
  */
 const modules = {
+    User,
+    Product
 }
 
 const initialActions = {

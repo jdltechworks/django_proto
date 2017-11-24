@@ -7,8 +7,6 @@ client/hot
 .env
 .idea
 proto_dependencies
-home/__pycache__/
-home/migrations/__pycache__/
-proto_classified/__pycache__/
-proto_classified/settings/__pycache__/
-search/__pycache__/
+*/__pycache__/
+*/migrations/__pycache__/
+*/*/__pycache__/

@@ -32,7 +32,9 @@ CORE_APPS = [
 ]
 
 CUSTOM_APPS = [
-    'home'
+    'home',
+    'products',
+    'uploads'
 ]
 
 INSTALLED_APPS = CORE_APPS + CUSTOM_APPS

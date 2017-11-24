@@ -16,7 +16,7 @@ class TextArea extends Component {
                         placeholder: capitalize(config.name),
                     }}
                     value={value}
-                    onChange={onChange}
+                    onChange={({text}) => onChange(text)}
                     commands={ReactMdeCommands}
                 />
             </div>

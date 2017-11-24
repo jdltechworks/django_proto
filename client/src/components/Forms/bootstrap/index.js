@@ -9,6 +9,11 @@ import React, { Component, Children, cloneElement } from 'react'
  * @type {Component}
  */
 class CoreForm extends Component {
+    componentDidMount() {
+
+        const { initialize, csrf_token } = this.props
+        initialize({ csrf_token })
+    }
     render() {
         const { props } = this
         const { children, handleSubmit } = props
