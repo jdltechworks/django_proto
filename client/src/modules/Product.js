@@ -1,5 +1,6 @@
 import map from 'lodash/map'
 import {createConstants, createReducer} from 'redux-module-builder'
+import omit from 'lodash/omit'
 
 export const initialState = {
     isFetchProducts: false,
@@ -48,9 +49,17 @@ export const actions = {
     },
     create(values) {
         const body = new FormData()
-        console.log(values)
-        const headers = new Headers({"X-CSRFToken": values.csrf_token})
+        const headers = new Headers({
+            "X-CSRFToken": values.csrf_token
+        })
+
         map(values, (value, key) => {
+            if(key == 'images') {
+                for(var i in value) {
+                    body.append('file', value[i])
+                }
+                return
+            }
             body.append(key, value)
         })
 
